@@ -1,0 +1,32 @@
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "my-app"
+  namespace: "default"
+  labels:
+    app: "my-app"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "my-app"
+  template:
+    metadata:
+      labels:
+        app: "my-app"
+    spec:
+      containers:
+      - name: "my-app-sha256-1"
+        image: "image_here"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "my-app-hpa-lgko"
+  namespace: "default"
+  labels:
+    app: "my-app"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "my-app"

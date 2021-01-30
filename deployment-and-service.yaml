@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: "my-app"
-        image: "image_here"
+        image: "namli/my-node-app-image:v11"
         ports:
           - containerPort: 3000
             name: "my-app"

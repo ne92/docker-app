@@ -25,9 +25,9 @@ spec:
         ports:
           - containerPort: 3000
             name: "my-app"
-    volumeMounts:
-      - mountPath: /var/www/ssl
-        name: secret-volume
+        volumeMounts:
+          - mountPath: /var/www/ssl
+            name: secret-volume
 
 ---
 

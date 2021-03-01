@@ -15,19 +15,19 @@ spec:
       labels:
         app: "my-app"
     spec:
-    volumes:
-      - name: secret-volume
-        secret:
-          secretName: my-app-secret
-    containers:
-      - name: "my-app"
-        image: "namli/my-node-app-image:v11"
-        ports:
-          - containerPort: 3000
-            name: "my-app"
-        volumeMounts:
-          - mountPath: /var/www/ssl
-            name: secret-volume
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: my-app-secret
+      containers:
+        - name: "my-app"
+          image: "namli/my-node-app-image:v11"
+          ports:
+            - containerPort: 3000
+              name: "my-app"
+          volumeMounts:
+            - mountPath: /var/www/ssl
+              name: secret-volume
 
 ---
 

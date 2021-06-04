@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', '$$image', '.']
+  args: ['build', '-t', '$image', '.']
   secretEnv: ['image']
 availableSecrets:
   secretManager:

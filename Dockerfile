@@ -1,6 +1,5 @@
-#FROM node:current-alpine3.10
+FROM node:current-alpine3.10
 #FROM namli/jenkins:v1
-FROM tutum/hello-world:latest
 WORKDIR /usr/src/app
 COPY . .
 #RUN npm install

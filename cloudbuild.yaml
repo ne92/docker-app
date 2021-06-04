@@ -1,8 +1,8 @@
 steps:
 - name: 'docker'
-  args: ['build', '-t', '$$IMAGE', '.']
-  secretEnv: ['IMAGE']
+  args: ['build', '-t', '$$image', '.']
+  secretEnv: ['image']
 availableSecrets:
   secretManager:
   - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/1
-    env: IMAGE
+    env: image

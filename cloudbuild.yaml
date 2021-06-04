@@ -4,4 +4,4 @@ steps:
 availableSecrets:
   secretManager:
   - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/1
-    env: 'IMAGE'
+    env: IMAGE

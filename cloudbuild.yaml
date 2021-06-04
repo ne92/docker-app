@@ -1,5 +1,5 @@
 steps:
-- name: 'namli/jenkins:v1'
+- name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', '$$IMAGE', '.']
   secretEnv: ['IMAGE']
 availableSecrets:

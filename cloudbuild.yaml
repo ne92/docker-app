@@ -1,5 +1,5 @@
 steps:
-- name: 'gnamli/jenkins:v1'
+- name: 'namli/jenkins:v1'
   args: ['build', '-t', '$$IMAGE', '.']
   secretEnv: ['IMAGE']
 availableSecrets:

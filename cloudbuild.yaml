@@ -1,8 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', '$$image', '.']
-  secretEnv: ['image']
+  args: ['build', '-t', 'gcr.io/sysadmin-151815/emren-test:v2', '.','-e','MYSQL_ROOT_PASSWORD=$$my-secret-pw']
+  secretEnv: ['my-secret-pw']
 availableSecrets:
   secretManager:
-  - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/2
-    env: image
+  - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/3
+    env: my-secret-pw

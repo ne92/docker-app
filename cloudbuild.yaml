@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','--label','$$my-secret-pw', '-t', 'gcr.io/sysadmin-151815/emren-test:v2', '.']
+  args: ['build','--label','$$my-secret-pw', '-t', 'gcr.io/sysadmin-151815/emren-test:$TAG_NAME', '.']
   secretEnv: ['my-secret-pw']
 availableSecrets:
   secretManager:
-  - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/3
+  - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/1
     env: my-secret-pw
-images: ['gcr.io/sysadmin-151815/emren-test:v2']
+images: ['gcr.io/sysadmin-151815/emren-test:$TAG_NAME']

@@ -1,8 +1,8 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/sysadmin-151815/emren-test:v2', '.']
-  #secretEnv: ['image']
-#availableSecrets:
- # secretManager:
- # - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/2
- #   env: image
+  args: ['build', '-t', '$$image', '.']
+  secretEnv: ['image']
+availableSecrets:
+  secretManager:
+  - versionName: projects/sysadmin-151815/secrets/emren-test1/versions/2
+    env: image

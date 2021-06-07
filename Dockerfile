@@ -1,4 +1,4 @@
-FROM node:current-alpine3.10
+FROM mysql:8.0
 #FROM namli/jenkins:v1
 WORKDIR /usr/src/app
 COPY . .

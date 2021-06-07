@@ -8,3 +8,4 @@ availableSecrets:
     env: my-secret-pw
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/sysadmin-151815/emren-test:v2']
+images: ['gcr.io/sysadmin-151815/emren-test:v2']
